@@ -74,6 +74,8 @@
     canvas.add(newcircle);
     canvas.add(newtext)
 
+    initPosition = true;
+
     
  }
 
@@ -103,13 +105,16 @@
 
   canvas.add(line);
   canvas.add(newcircle);
-  canvas.add(newtext)
+  canvas.add(newtext);
+
+  initPosition = true;
   
 }
   
 
   addNumber = () => { // add a number
     if (initPosition) {
+      arrayIndex = 1;
      x1Right = canvas.getWidth() / 2 + 33;
      y1Right = 18;
      x2Right = 1000;
