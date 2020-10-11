@@ -36,8 +36,12 @@ let circle = new fabric.Circle({
   stroke:"#000000"
 })
 
+let firCircle;
+
+
+
 addFirstCircle = (num) => { //add the first circle
-let circle = new fabric.Circle({
+ firCircle = new fabric.Circle({
   radius:17,
   fill:"white",
   stroke:"#000000"
@@ -51,16 +55,16 @@ let text = new fabric.Text(
 })
 binaryTreeArr[1] = (num);
 
-canvas.add(circle)
+canvas.add(firCircle)
 canvas.add(text);
 
-circle.centerH();
+firCircle.centerH();
 text.centerH();
 
-leftCircleCornerX = circle.getCoords()[3].x;
-leftCircleCornerY = circle.getCoords()[3].y;
-rightCircleCornerX = circle.getCoords()[2].x;
-rightCircleCornerY = circle.getCoords()[2].y;
+leftCircleCornerX = firCircle.getCoords()[3].x;
+leftCircleCornerY = firCircle.getCoords()[3].y;
+rightCircleCornerX = firCircle.getCoords()[2].x;
+rightCircleCornerY = firCircle.getCoords()[2].y;
 
 }
 
@@ -145,6 +149,13 @@ addNumber = () => { // add a number
    initPosition = false;
    currentLineOffset = 300;
    yValue = 80;
+   
+  //  if (firCircle) {
+  //   leftCircleCornerX = firCircle.getCoords()[3].x;
+  //   leftCircleCornerY = firCircle.getCoords()[3].y;
+  //   rightCircleCornerX = firCircle.getCoords()[2].x;
+  //   rightCircleCornerY = firCircle.getCoords()[2].y;
+  //  }
   }
 
   if (firstCircle) {
