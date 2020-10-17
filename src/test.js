@@ -105,6 +105,11 @@ addRightNode = (num) => {
 
 
   initPosition = true;
+
+  leftCircleCornerX = firCircle.getCoords()[3].x; // firstCircle Position;
+  leftCircleCornerY = firCircle.getCoords()[3].y;
+  rightCircleCornerX = firCircle.getCoords()[2].x;
+  rightCircleCornerY = firCircle.getCoords()[2].y;
 }
 
 addLeftNode = (num) => {
@@ -141,6 +146,12 @@ addLeftNode = (num) => {
   canvas.add(group);
 
   initPosition = true;
+
+
+  leftCircleCornerX = firCircle.getCoords()[3].x; // firstCircle Position;
+leftCircleCornerY = firCircle.getCoords()[3].y;
+rightCircleCornerX = firCircle.getCoords()[2].x;
+rightCircleCornerY = firCircle.getCoords()[2].y;
 }
 
 addNumber = () => { // add a number
@@ -157,6 +168,7 @@ addNumber = () => { // add a number
   //   rightCircleCornerY = firCircle.getCoords()[2].y;
   //  }
   }
+  
 
   if (firstCircle) {
       addFirstCircle(input.value);
